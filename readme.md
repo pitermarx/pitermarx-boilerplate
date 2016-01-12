@@ -1,4 +1,4 @@
-# [Pitermarx-Boilerplate](pitermarx-boilerplate.surge.sh)
+# [Pitermarx-Boilerplate](https://pitermarx-boilerplate.surge.sh)
 ### A starter kit for small personal projects
 
 #### THIS IS A WORK-IN-PROGRESS
