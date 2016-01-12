@@ -31,11 +31,11 @@ I wanted to have a <50Kb boilerplate code that I could use as a starting point f
 
 The built version is has 3 files
 
-|File |Size     |
-|-----|---------|
-|.js  |23.3 kB  |
-|.css |21.7 kB  |
-|.html|289 bytes|
+|File |Size(gziped)|
+|-----|------------|
+|.js  |9.3 kB      |
+|.css |5.5 kB      |
+|.html|894 bytes   |
 
 #### Usage
 
