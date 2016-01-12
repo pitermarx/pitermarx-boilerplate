@@ -30,16 +30,18 @@ I wanted to have a <50Kb boilerplate code that I could use as a starting point f
 
 The built version is has 3 files
 
-|File|Size|
-|-|-|
-|.js|23.3 kB|
-|.css|21.7 kB|
+|File |Size     |
+|-----|---------|
+|.js  |23.3 kB  |
+|.css |21.7 kB  |
 |.html|289 bytes|
 
 #### Usage
+
 After *npm install*
+
 1. Build with *npm run build*
 2. Start a dev server with *npm run start*
 3. Deploy to surge with *npm run deploy*
- * edit your CNAME file
+  * edit your CNAME file
 4. Have fun with *npm run yolo*
