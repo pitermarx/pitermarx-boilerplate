@@ -23,11 +23,12 @@ I wanted to have a <50Kb boilerplate code that I could use as a starting point f
  
 1. Using [Yeti.css](http://yeticss.com/)
 2. Using [redux](https://github.com/rackt/redux) and a bit of handwritten js
-3. Using [webpack](https://webpack.github.io/) and [webpack-dev-server](http://webpack.github.io/docs/webpack-dev-server.html)
+3. Using [virtual-dom](https://github.com/Matt-Esch/virtual-dom) and some related packages to handle DOM rendering
+4. Using [webpack](https://webpack.github.io/) and [webpack-dev-server](http://webpack.github.io/docs/webpack-dev-server.html)
   * [hjs-webpack](https://github.com/henrikjoreteg/hjs-webpack) was very useful
   * [babel](https://babeljs.io/) is the way to go for JSX and ES6
-4. Using [npm scripts](https://docs.npmjs.com/misc/scripts)
-5. Using [surge.sh](https://surge.sh/)
+5. Using [npm scripts](https://docs.npmjs.com/misc/scripts)
+6. Using [surge.sh](https://surge.sh/)
 
 The built version is has 3 files
 
