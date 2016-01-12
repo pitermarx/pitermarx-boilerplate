@@ -1,4 +1,4 @@
-import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY, SET_URL, Urls } from '../constants'
+import { ADD_TODO, COMPLETE_TODO, SET_URL } from '../constants'
 
 let nextTodoId = 0
 
@@ -13,10 +13,6 @@ export function addTodo(text) {
 
 export function completeTodo(id) {
   return { type: COMPLETE_TODO, id }
-}
-
-export function setVisibility(filter) {
-  return setUrl(Urls[filter])
 }
 
 export function setUrl(url) {

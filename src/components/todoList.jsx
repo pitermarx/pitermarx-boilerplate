@@ -1,14 +1,14 @@
-import { VisibilityFilters } from '../constants'
+import { Urls } from '../constants'
 
 
 export default function(model) {
   function isVisible(todo) {
-    switch (model.filter) {
-      case VisibilityFilters.SHOW_ALL:
+    switch (model.url) {
+      case Urls.HOME:
         return true
-      case VisibilityFilters.SHOW_COMPLETED:
+      case Urls.COMPLETED:
         return todo.completed
-      case VisibilityFilters.SHOW_ACTIVE:
+      case Urls.ACTIVE:
         return !todo.completed
     }
   }

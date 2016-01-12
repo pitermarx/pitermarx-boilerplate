@@ -1,24 +1,27 @@
-import {VisibilityFilters, Urls} from '../constants'
+import {Urls} from '../constants'
 
 export default function (model) {
-  function renderFilter(filter, text) {
-      if (filter === model.filter) {
+  function renderFilter(url, text) {
+      if (url === model.url) {
         return text
       }
 
       return (
-        <a href={Urls[filter]} onclick={e => e.preventDefault()}>{text}</a>
+        <a href={url} onclick={e =>{
+          e.preventDefault()
+          model.setUrl(url)
+        }}>{text}</a>
       )
   }
 
   return (<p >
     Show:
     {' '}
-    {renderFilter(VisibilityFilters.SHOW_ALL, 'All')}
+    {renderFilter(Urls.HOME, 'All')}
     {', '}
-    {renderFilter(VisibilityFilters.SHOW_COMPLETED, 'Completed')}
+    {renderFilter(Urls.COMPLETED, 'Completed')}
     {', '}
-    {renderFilter(VisibilityFilters.SHOW_ACTIVE, 'Active')}
+    {renderFilter(Urls.ACTIVE, 'Active')}
     .
   </p>)
 }

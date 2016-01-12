@@ -10,7 +10,7 @@ export default function (store) {
   
   return <div id='root'>
     {addTodo({addTodo: actions.addTodo})}
-    {todoList({filter: state.filter, todos: state.todos, complete: actions.completeTodo})}
-    {footer({filter: state.filter, setVisibility: actions.setVisibility})}
+    {todoList({url: state.url, todos: state.todos, complete: actions.completeTodo})}
+    {footer({url: state.url, setUrl: actions.setUrl})}
   </div>
 }

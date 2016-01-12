@@ -1,7 +1,7 @@
-import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY, SET_URL, VisibilityFilters as filters } from '../constants'
+import { ADD_TODO, COMPLETE_TODO, SET_URL } from '../constants'
 import { combineReducers } from 'redux'
 
-function todos(state = [], action) {
+const todos = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       return state.concat([{
@@ -20,13 +20,10 @@ function todos(state = [], action) {
   }
 }
 
-const filter = (state = filters.SHOW_ALL, action) =>
-  action.type === SET_VISIBILITY ? action.filter : state
-
 const url = (state = '/', action) =>
   action.type === SET_URL ? action.url : state
   
 export default combineReducers({
   todos,
-  filter
+  url
 })
