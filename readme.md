@@ -44,5 +44,4 @@ After *npm install*
 1. Build with *npm run build*
 2. Start a dev server with *npm run start*
 3. Deploy to surge with *npm run deploy*
-  * edit your CNAME file
 4. Have fun with *npm run yolo*

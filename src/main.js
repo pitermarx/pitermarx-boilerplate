@@ -3,4 +3,7 @@ import reducer from './reducers'
 import app from './containers/app'
 import './styles/main.styl'
 
-renderer(app, reducer)
+renderer(
+  document.getElementById('root'), 
+  app, 
+  reducer)

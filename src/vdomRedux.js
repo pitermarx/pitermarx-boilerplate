@@ -1,16 +1,16 @@
 import diff from 'virtual-dom/diff'
 import patch from 'virtual-dom/patch'
-import h from 'virtual-dom/h'
+import virtualize from 'vdom-virtualize'
 import { createStore } from 'redux'
 
-export default function(app, reducer) {
-  const store = createStore(reducer)
-  let currentVDom = h('div#root')
+export default function(rootNode, app, reducer) {
+  const store = createStore(reducer, JSON.parse(window.__INITIAL_STATE__))
+  let currentVDom = virtualize(rootNode)
   const render = () => {
     requestAnimationFrame(() => {
       const newVDom = app(store)
       const patches = diff(currentVDom, newVDom)
-      patch(document.getElementById('root'), patches);
+      patch(rootNode, patches);
       currentVDom = newVDom
       
       const url = store.getState().url
@@ -19,7 +19,7 @@ export default function(app, reducer) {
       }
     })
   }
-      
+  
   store.subscribe(render)
   render()
   

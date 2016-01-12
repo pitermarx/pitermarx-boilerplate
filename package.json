@@ -4,7 +4,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "deploy": "surge -p public",
+    "deploy": "surge -p ./public -d pitermarx-boilerplate.surge.sh",
     "yolo": "npm run build && npm run deploy"
   },
   "babel": {
@@ -35,6 +35,7 @@
     "stylus-loader": "^1.4.3",
     "surge": "^0.17.4",
     "vdom-to-html": "^2.2.0",
+    "vdom-virtualize": "^1.0.1",
     "virtual-dom": "^2.1.1",
     "webpack": "^1.12.10",
     "webpack-dev-server": "^1.14.0",
