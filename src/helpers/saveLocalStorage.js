@@ -1,7 +1,5 @@
 // if localStorage is not defined, do nothing here
-const ls = typeof(localStorage) == 'undefined' ? null : localStorage
-
-export const storage = ls
+export const storage = typeof(localStorage) == 'undefined' ? null : localStorage
 
 // this function transforms the reducer in a "state-saving" reducer
 export default function (reducer, name){
