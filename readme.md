@@ -15,6 +15,7 @@ I wanted to have a <50Kb boilerplate code that I could use as a starting point f
   * Being able to just *npm install* stuff
 4. Would be nice to
   * Have hot-reloading 
+  * Forward and backwards buttons work as expected
   * Have precompiled html pages to serve even without js on the client
   * Have a simple set of commands for building/setting up a local server/deploying 
 
