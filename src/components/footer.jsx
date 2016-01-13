@@ -1,20 +1,20 @@
 import { Urls } from '../constants'
+import { setUrl } from '../actions'
 
-export default function (model) {
-  function renderFilter (url, text) {
-    if (url === model.url) {
+export default function (state, dispatch) {
+  const {url} = state
+  function renderFilter (urlToRender, text) {
+    if (urlToRender === url) {
       return text
     }
 
-    return (
-    <a href={url} onclick={e => {
+    return <a href={urlToRender} onclick={e => {
       e.preventDefault()
-      model.setUrl(url)
+      dispatch(setUrl(urlToRender))
     }}>{text}</a>
-    )
   }
 
-  return (<p >
+  return <p>
     Show:
     {' '}
     {renderFilter(Urls.HOME, 'All')}
@@ -23,5 +23,5 @@ export default function (model) {
     {', '}
     {renderFilter(Urls.ACTIVE, 'Active')}
     .
-  </p>)
+  </p>
 }

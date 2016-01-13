@@ -1,34 +1,24 @@
 import { Urls } from '../constants'
+import {completeTodo} from '../actions'
 
-export default function(model) {
-  function isVisible (todo) {
-    switch (model.url) {
-      case Urls.HOME:
-        return true
-      case Urls.COMPLETED:
-        return todo.completed
-      case Urls.ACTIVE:
-        return !todo.completed
-    }
-  }
-
-  return (
-  <ul>
-      {model.todos.map((todo) => {
-        if (!isVisible(todo)) {
-          return null
-        }
-        return (
-        <li
-        onclick={e => model.complete(todo.id)}
+export default function(state, dispatch) {
+  const {url, todos} = state
+  const isVisible = 
+    url === Urls.HOME ? () => true : 
+    url === Urls.COMPLETED ? t => t.completed :
+    url === Urls.ACTIVE ? t => !t.completed :
+    () => false 
+    
+  var lis = todos
+    .filter(isVisible)
+    .map(todo => <li
+        onclick={e => dispatch(completeTodo(todo.id))}
         style={{
           textDecoration: todo.completed ? 'line-through' : 'none',
           cursor: todo.completed ? 'default' : 'pointer'
         }}>
-                {todo.text}
-              </li>
-        )
-      })}
-    </ul>
-  )
+          {todo.text}
+      </li>)
+    
+  return <ul>{lis}</ul>
 }

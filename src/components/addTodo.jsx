@@ -1,18 +1,18 @@
-export default function (model) {
+import {addTodo} from '../actions'
+
+export default function (state, dispatch) {
   const handleClick = (e) => {
     const input = document.getElementById('newTodoInput')
     if (input.value) {
-      model.addTodo(input.value.trim())
+      dispatch(addTodo(input.value.trim()))
       input.value = ''
     }
   }
 
-  return (
-  <div> 
-      <input id="newTodoInput" type='text' onsubmit={handleClick}/>
-      <button onclick={handleClick}>
-        Add
-      </button>
-    </div>
-  )
+  return <div> 
+    <input id="newTodoInput" type='text' />
+    <button onclick={handleClick}>
+      Add
+    </button>
+  </div>
 }
