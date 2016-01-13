@@ -6,7 +6,7 @@
     "build": "webpack",
     "deploy": "surge -p ./public -d pitermarx-boilerplate.surge.sh",
     "yolo": "npm run build && npm run deploy",
-    "test": "babel-tape-runner test/**/*.js"
+    "test": "babel-tape-runner test"
   },
   "babel": {
     "presets": ["es2015"],
