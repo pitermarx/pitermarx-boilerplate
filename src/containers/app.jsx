@@ -4,7 +4,7 @@
  * exports a function that is the current DOM given the store's state
  * the first node should be a div with the id "root" to match what is expected in ../main.js 
  */
- 
+
 import addTodo from '../components/addTodo'
 import todoList from '../components/todoList'
 import footer from '../components/footer'
@@ -14,7 +14,7 @@ import * as unboundActions from '../actions'
 export default function (store) {
   const actions = bindActionCreators(unboundActions, store.dispatch)
   const state = store.getState()
-  
+
   return <div id='root'>
     {addTodo({addTodo: actions.addTodo})}
     {todoList({url: state.url, todos: state.todos, complete: actions.completeTodo})}

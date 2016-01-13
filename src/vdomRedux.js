@@ -16,10 +16,10 @@ export default function(rootNode, app, reducer) {
       // get the diff from the previous one
       const patches = diff(currentVDom, newVDom)
       // apply diff
-      patch(rootNode, patches);
+      patch(rootNode, patches)
       // save new VDom
       currentVDom = newVDom
-      
+
       // if url changed, update the history
       const url = store.getState().url
       if (location.pathname !== url) {
@@ -27,12 +27,12 @@ export default function(rootNode, app, reducer) {
       }
     })
   }
-  
+
   // when the state changes, render the app
   store.subscribe(render)
   // start the app
   render()
-  
+
   // if the user hits the back/forward buttons
   // change state on store
   window.addEventListener('popstate', () => {

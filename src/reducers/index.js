@@ -8,7 +8,7 @@ import persist from '../helpers/saveLocalStorage'
 import { combineReducers } from 'redux'
 
 // todos reducer
-const todos = persist((state = [], action) => {
+const todos = persist((state = [] , action) => {
   switch (action.type) {
     case ADD_TODO:
       // get an unique id
@@ -20,9 +20,9 @@ const todos = persist((state = [], action) => {
       }])
     case COMPLETE_TODO:
       return state.map(t => ({
-        completed: t.id === action.id ? true : t.completed,
-        id: t.id,
-        text: t.text
+          completed: t.id === action.id ? true : t.completed,
+          id: t.id,
+          text: t.text
       }))
     default:
       return state
@@ -30,7 +30,6 @@ const todos = persist((state = [], action) => {
 })
 
 // url reducer
-const url = (state = '/', action) =>
-  action.type === SET_URL ? action.url : state
-  
-export default combineReducers({ todos, url })
+const url = (state = '/' , action) => action.type === SET_URL ? action.url : state
+
+export default combineReducers({ todos, url})

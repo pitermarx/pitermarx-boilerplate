@@ -1,17 +1,17 @@
-import {Urls} from '../constants'
+import { Urls } from '../constants'
 
 export default function (model) {
-  function renderFilter(url, text) {
-      if (url === model.url) {
-        return text
-      }
+  function renderFilter (url, text) {
+    if (url === model.url) {
+      return text
+    }
 
-      return (
-        <a href={url} onclick={e =>{
-          e.preventDefault()
-          model.setUrl(url)
-        }}>{text}</a>
-      )
+    return (
+    <a href={url} onclick={e => {
+      e.preventDefault()
+      model.setUrl(url)
+    }}>{text}</a>
+    )
   }
 
   return (<p >

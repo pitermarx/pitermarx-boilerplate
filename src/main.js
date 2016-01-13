@@ -8,6 +8,6 @@ import app from './containers/app'
 
 // bootstrap app
 renderer(
-  document.getElementById('root'), 
+  document.getElementById('root'),
   app,
   reducer)
