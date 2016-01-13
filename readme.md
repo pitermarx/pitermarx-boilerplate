@@ -4,7 +4,7 @@
 #### THIS IS A WORK-IN-PROGRESS
 
 Inspired by [feather-app](https://github.com/HenrikJoreteg/feather-app/)
-I wanted to have a <50Kb boilerplate code that I could use as a starting point for personal projects.
+I wanted to have a <20Kb boilerplate code that I could use as a starting point for personal projects.
 
 #### I wanted it to have
 1. A basic css framework and [normalize.css](https://necolas.github.io/normalize.css/)
