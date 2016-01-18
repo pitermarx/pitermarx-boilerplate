@@ -10,7 +10,8 @@ function getHtml(state){
   var jsonState = JSON.stringify(state);
   var script = state ? "<script>window.__INITIAL_STATE__ = '"+jsonState+"'</script>" : ""
   return {
-    html: toHtml(app(store)) + script
+    html: toHtml(app(store)) + script,
+    title: 'pitermarx-boilerplate'
   }
 }
 
