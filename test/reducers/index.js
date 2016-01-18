@@ -28,4 +28,4 @@ test('todos reducer', function (t) {
     {id:2, completed:false, text:'test2'}], actions.completeTodo(2)), 
     [{id:1, completed:false, text:'test'},
     {id:2, completed:true, text:'test2'}])
-})
+}) 

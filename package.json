@@ -4,9 +4,9 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "deploy": "surge -p ./public -d pitermarx-boilerplate.surge.sh",
+    "deploy": "surge -p ./public",
     "yolo": "npm run build && npm run deploy",
-    "test": "babel-tape-runner test"
+    "test": "babel-tape-runner test/**/*.js"
   },
   "babel": {
     "presets": ["es2015"],
