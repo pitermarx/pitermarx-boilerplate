@@ -15,7 +15,6 @@ function getHtml(state){
   }
 }
 
-
 module.exports = getConfig({
   in: 'src/main.js',
   out: 'public',
