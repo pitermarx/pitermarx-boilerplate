@@ -1,0 +1,18 @@
+{
+  "title": "ριтєя мαяχ's boilerplate page",
+  "subTitle": "An attempt to a simple starting point bellow 20Kb",
+  "TodoList": "Todo List",
+  "addComponent" : {
+    "WhatToDo": "What to do next?"
+  },
+  "footerComponent" : {
+    "All": "All",
+    "Completed": "Completed",
+    "Active": "Active"
+  },
+  "listComponent": {
+    "setActive": "set active",
+    "complete": "complete",
+    "delete": "delete"
+  }
+}

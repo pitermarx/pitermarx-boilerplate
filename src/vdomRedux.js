@@ -1,12 +1,17 @@
 import diff from 'virtual-dom/diff'
 import patch from 'virtual-dom/patch'
-import virtualize from 'vdom-virtualize'
-import { createStore } from 'redux'
+import virtualize from 'vdom-parser'
+import { createStore, compose } from 'redux'
+
+// use chrome redux devTools if available
+const finalCreateStore = window.devToolsExtension
+  ? compose(window.devToolsExtension())(createStore)
+  : createStore
 
 // app bootstrapper
 export default function(rootNode, app, reducer) {
   // creates a store with the __INITIAL_STATE__
-  const store = createStore(reducer, JSON.parse(window.__INITIAL_STATE__))
+  const store = finalCreateStore(reducer, JSON.parse(window.__INITIAL_STATE__))
   // gets the current VDOM from the DOM
   let currentVDom = virtualize(rootNode)
   const render = () => {

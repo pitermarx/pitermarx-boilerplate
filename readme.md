@@ -23,7 +23,7 @@ I wanted to have a <20Kb boilerplate code that I could use as a starting point f
  
 1. Using [Yeti.css](http://yeticss.com/)
 2. Using [redux](https://github.com/rackt/redux) and a bit of handwritten js
-3. Using [virtual-dom](https://github.com/Matt-Esch/virtual-dom), [vdom-virtualize](https://github.com/marcelklehr/vdom-virtualize) and [vdom-to-html](https://github.com/nthtran/vdom-to-html/) some related packages to handle DOM rendering/parsing/diffing/suffs
+3. Using [virtual-dom](https://github.com/Matt-Esch/virtual-dom), [vdom-parser](https://github.com/bitinn/vdom-parser) and [vdom-to-html](https://github.com/nthtran/vdom-to-html/) some related packages to handle DOM rendering/parsing/diffing/suffs
 4. Using [webpack](https://webpack.github.io/) and [webpack-dev-server](http://webpack.github.io/docs/webpack-dev-server.html)
   * [hjs-webpack](https://github.com/henrikjoreteg/hjs-webpack) was very useful
   * [babel](https://babeljs.io/) is the way to go for JSX and ES6
@@ -34,9 +34,9 @@ The built version is has 3 files
 
 |File |Size(gziped)|
 |-----|------------|
-|.js  |9.3 kB      |
+|.js  |12.8 kB     |
 |.css |5.5 kB      |
-|.html|894 bytes   |
+|.html|2 kB        |
 
 #### Usage
 

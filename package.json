@@ -9,9 +9,16 @@
     "test": "babel-tape-runner test/**/*.js"
   },
   "babel": {
-    "presets": ["es2015"],
+    "presets": [
+      "es2015"
+    ],
     "plugins": [
-      ["transform-react-jsx",{"pragma": "h"}],
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ],
       "h-children-fix"
     ]
   },
@@ -24,14 +31,15 @@
     "babel-tape-runner": "^2.0.0",
     "css-loader": "^0.23.1",
     "hjs-webpack": "^6.1.0",
+    "json-loader": "^0.5.4",
     "postcss-loader": "^0.8.0",
     "redux": "^3.0.5",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.3",
     "surge": "^0.17.4",
     "tape": "^4.4.0",
+    "vdom-parser": "^1.2.1",
     "vdom-to-html": "^2.2.0",
-    "vdom-virtualize": "^1.0.1",
     "virtual-dom": "^2.1.1",
     "webpack": "^1.12.10",
     "webpack-dev-server": "^1.14.0",

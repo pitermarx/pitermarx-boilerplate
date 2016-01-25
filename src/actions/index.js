@@ -4,7 +4,7 @@
  * Be sure to export them all here in the index.js file
  */
 
-import { ADD_TODO, COMPLETE_TODO, SET_URL } from '../constants'
+import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO, SET_URL } from '../constants'
 
 export function addTodo(text) {
   return {
@@ -14,8 +14,12 @@ export function addTodo(text) {
   }
 }
 
-export function completeTodo(id) {
-  return { type: COMPLETE_TODO, id }
+export function toggleTodo(id) {
+  return { type: TOGGLE_TODO, id }
+}
+
+export function removeTodo(id) {
+  return { type: REMOVE_TODO, id }
 }
 
 export function setUrl(url) {

@@ -11,14 +11,14 @@ function getHtml(state){
   var script = state ? "<script>window.__INITIAL_STATE__ = '"+jsonState+"'</script>" : ""
   return {
     html: toHtml(app(store)) + script,
-    title: 'pitermarx-boilerplate'
+    title: 'pitermarx-boilerplate ' + state.url.substr(1)
   }
 }
 
-module.exports = getConfig({
+var config = getConfig({
   in: 'src/main.js',
   out: 'public',
-  clearBeforeBuild: true,
+  clearBeforeBuild: '!CNAME',
   html: function (data) {
     return {
       'index.html': data.defaultTemplate(getHtml({url:'/'})),
@@ -27,3 +27,5 @@ module.exports = getConfig({
     }
   }
 })
+
+module.exports = config

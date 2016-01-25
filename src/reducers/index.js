@@ -3,7 +3,7 @@
  * Be sure to not mutate the state and return always a new object instance on the reducers
  */
 
-import { ADD_TODO, COMPLETE_TODO, SET_URL } from '../constants'
+import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO, SET_URL } from '../constants'
 import persist from '../helpers/saveLocalStorage'
 import { combineReducers } from 'redux'
 
@@ -18,12 +18,15 @@ export const todos = persist((state = [] , action) => {
         completed: false,
         text: action.text
       }])
-    case COMPLETE_TODO:
-      return state.map(t => ({
-          completed: t.id === action.id ? true : t.completed,
+    case TOGGLE_TODO:
+      return state.map(t => 
+        t.id !== action.id ? t : {
+          completed: !t.completed,
           id: t.id,
           text: t.text
-      }))
+      })
+    case REMOVE_TODO:
+      return state.filter(t => t.id !== action.id)
     default:
       return state
   }
